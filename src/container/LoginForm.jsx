@@ -3,9 +3,12 @@ import { useForm } from "react-hook-form";
 import { UseUseContext } from "../context/UserContext";
 
 const LoginForm = () => {
-
-    const {logIn} = UseUseContext()
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { logIn } = UseUseContext();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const onSubmit = (data) => {
     logIn(data.username);
     console.log("Form data", data);
